@@ -135,6 +135,9 @@ body {
 	background-color: transparent;
 	padding-left: 34px;
 	border-radius: 0 !important;
+}
+
+.SearchInput__input:hover, .SearchInput__input:focus {
 	border-bottom: 1px solid var(--modspotify_main_fg) !important;
 }
 
@@ -718,8 +721,11 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /* Search bar in app */
 
-.h-search {
+.h-search:hover, .h-search:focus {
 	border-bottom: 1px solid var(--modspotify_main_fg);
+}
+
+.h-search {
 	border-radius: 0;
 }
 
