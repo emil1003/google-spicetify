@@ -5,19 +5,19 @@
 	--section-border-radius: 8px;
 }
 
-@font-face {
+/*@font-face {
 	font-family: "Google Sans Display";
 	src: url("https://d2j0f09xqmv212.cloudfront.net/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 400;
-}
+}*/
 
-@font-face {
+/*@font-face {
 	font-family: "Google Sans Display";
 	src: url("https://d2j0f09xqmv212.cloudfront.net/fonts/GoogleSansDisplayMedium.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 500;
-}
+}*/
 
 @font-face {
 	font-family: "Roboto";
@@ -34,9 +34,14 @@
 }
 
 body {
-	--glue-font-family: "Google Sans Display", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+	--glue-font-family: "Product Sans", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
 	--info-font-family: "Roboto", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
 	letter-spacing: 0;
+}
+
+/* Remove new playlist button */
+.LeftSidebarNewPlaylistButton__button {
+	display: none !important;
 }
 
 /*Round corner cover image*/
@@ -586,7 +591,7 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .LeftSidebar__section {
 	margin: 0;
-	padding: 18px 0;
+	padding: 8px 0;
 	border-bottom: 1px solid var(--modspotify_scrollbar_fg_and_selected_row_bg);
 }
 
@@ -720,6 +725,10 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .focus .h-search, .h-search:focus {
 	background: none;
+}
+
+.h-title a {
+	color: var(--modspotify_secondary_fg) !important;
 }
 
 /* Card buttons */
@@ -952,6 +961,10 @@ body.remotebar .view-player .player-bar-wrapper {
 	overflow: unset;
 }
 
+.view-player .track a {
+	color: var(--modspotify_secondary_fg) !important;
+}
+
 .view-player .now-playing-container .button-add {
 	color: var(--modspotify_main_fg) !important;
 }
@@ -1096,6 +1109,11 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	color: var(--modspotify_secondary_fg);
 }
 
+/* Connect Icon */
+.view-player .extra-controls-container .button-devices.active, .view-player .extra-controls-container .button-lyrics.active, .view-player .extra-controls-container .button-queue.active, .view-player .extra-controls-container .button-subtitles.active {
+	color: var(--modspotify_main_fg) !important;
+}
+
 /* Connect Device Popup */
 
 /* Cannot edit svg colors, hide it away */
@@ -1112,7 +1130,7 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 /* Volume bar */
 
 .view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner, .view-player .extra-controls-container .volumebar-container:hover .inner {
-	background-color: var(--modspotify_sidebar_indicator_and_hover_button_bg);
+	background-color: var(--modspotify_main_fg);
 }
 
 /* Search page */
