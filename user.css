@@ -156,6 +156,11 @@ body {
 	border-bottom: 1px solid var(--modspotify_main_fg) !important;
 }
 
+.SearchInput__input:not(:placeholder-shown), .SearchInput__input:focus {
+	background-color: rgba(var(--modspotify_rgb_slider_bg), 0.54);
+	border-radius: 4px 4px 0 0 !important;
+}
+
 /*
 Collage of 3 album covers is usually seen in Browse and Chart.
 */
