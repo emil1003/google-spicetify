@@ -261,6 +261,11 @@ form, so I move last cover to the right 20px and first one to the left 20px
 	background: transparent !important;
 }
 
+/* Color tracklist sort arrow */
+.tl-sort-asc::after, .tl-sort-desc::after {
+	color: var(--modspotify_main_fg);
+}
+
 .GlueHeader__background-overlay {
 	background: var(--modspotify_main_bg) !important;
 }
