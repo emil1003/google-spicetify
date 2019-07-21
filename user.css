@@ -44,6 +44,15 @@ body {
 	display: none !important;
 }
 
+/* Download Progress */
+.sidebar #offline-global-progress {
+	border-top: 1px solid var(--modspotify_slider_bg) !important;
+}
+
+.sidebar #offline-global-progress p {
+	background-color: var(--modspotify_main_fg);
+}
+
 /*Round corner cover image*/
 
 .card-image, .card-placeholder-wrapper, .card-image-content-wrapper, .card-image-wrapper, .Card .Card__image, .Card .Card__image-wrapper {
