@@ -53,6 +53,12 @@ body {
 	background-color: var(--modspotify_main_fg);
 }
 
+/* Offline indicator */
+.offline-label-wrapper {
+	background-color: var(--modspotify_main_bg);
+	border-top: 1px solid var(--modspotify_slider_bg);
+}
+
 /*Round corner cover image*/
 
 .card-image, .card-placeholder-wrapper, .card-image-content-wrapper, .card-image-wrapper, .Card .Card__image, .Card .Card__image-wrapper {
