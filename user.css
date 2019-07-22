@@ -152,13 +152,15 @@ body {
 	border-radius: 0 !important;
 }
 
-.SearchInput__input:hover, .SearchInput__input:focus {
-	border-bottom: 1px solid var(--modspotify_main_fg) !important;
+.content-top-bar__search-input {
+	margin-top: 15px;
+	background-color: rgba(var(--modspotify_rgb_main_bg), .54);
+	border-radius: 100px;
+	height: 32px;
 }
 
-.SearchInput__input:not(:placeholder-shown), .SearchInput__input:focus {
-	background-color: rgba(var(--modspotify_rgb_slider_bg), 0.54);
-	border-radius: 4px 4px 0 0 !important;
+.search-mount-point {
+	margin: 4px;
 }
 
 /*
@@ -275,14 +277,19 @@ form, so I move last cover to the right 20px and first one to the left 20px
 .browser-navigation-top-bar {
 	margin-top: 15px !important;
 	margin-left: 8px;
-}
 
-.SearchInput__input, .SearchInput__searchIcon, .SearchInput__clearButton {
-	margin-top: 15px !important;
+	/* Transparent background */
+	height: unset !important;
+	background-color: rgba(var(--modspotify_rgb_main_bg), .54);
+	border-radius: 100px;
 }
 
 .content-top-bar__profile-menu-button {
 	margin-top: 15px !important;
+}
+
+#profile-menu-toggle::before {
+	background-color: rgba(var(--modspotify_rgb_main_bg), .54);
 }
 
 .body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
