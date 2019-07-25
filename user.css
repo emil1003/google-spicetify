@@ -715,6 +715,12 @@ body.remotebar .view-player .player-bar-wrapper {
 	color: var(--modspotify_main_fg);
 }
 
+/* Popular track cover */
+.tl-album-cover {
+	margin-top: 5px;
+	border-radius: 100px;
+}
+
 .TableCell {
 	border-top: 0;
 }
