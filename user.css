@@ -345,11 +345,7 @@ and add little glowing effect
 */
 
 .navbar-nav::after {
-	width: 100%;
-	height: 1px;
-	bottom: 0;
-	position: absolute;
-	background: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+	display: none;
 }
 
 .nav.navbar-nav li {
