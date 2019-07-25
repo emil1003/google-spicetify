@@ -739,6 +739,11 @@ body.remotebar .view-player .player-bar-wrapper {
 	padding-left: 0;
 }
 
+/* Fix card artist image */
+.card-type-artist .card-image {
+	border-radius: 100px !important;
+}
+
 /* Sort element: color, remove label */
 
 .section-divider .GlueDropdown {
