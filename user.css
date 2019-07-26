@@ -740,6 +740,11 @@ body.remotebar .view-player .player-bar-wrapper {
 	border-radius: 100px !important;
 }
 
+/* Fit overlay to circular artist icon */
+.card-type-artist .card-overlay {
+	border-radius: 500px !important;
+}
+
 /* Sort element: color, remove label */
 
 .section-divider .GlueDropdown {
