@@ -999,10 +999,20 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /*Force player bar to has fixed height*/
 
+/* Apply constrasting background to player bar */
+
 .view-player {
 	height: var(--bar-height) !important;
 	border-top: 0;
-	margin: 0 15px;
+	padding: 0 15px;
+	background: var(--modspotify_slider_bg);
+	box-shadow: 0 0 20px 5px var(--modspotify_main_bg);
+}
+
+/* Fix scrolling text shadowing color */
+
+.view-player .text-container .text-item-container .text-item .scroll-text-container:after {
+	background: linear-gradient(90deg,transparent,var(--modspotify_slider_bg));
 }
 
 /* Hide dots under controls */
