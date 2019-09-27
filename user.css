@@ -734,6 +734,15 @@ body.remotebar .view-player .player-bar-wrapper {
 	padding-left: 0;
 }
 
+/* Fix calendar icon inheriting wrong colors */
+.calendar-icon-month {
+	color: var(--modspotify_preserve_1);
+}
+
+.calendar-icon-day {
+	background-color: var(--modspotify_preserve_1);
+}
+
 /* Fix card artist image */
 .card-type-artist .card-image {
 	border-radius: 100px !important;
