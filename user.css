@@ -688,12 +688,23 @@ body.remotebar .view-player .player-bar-wrapper {
 	background-color: rgba(var(--modspotify_rgb_sidebar_indicator_and_hover_button_bg), 0.2) !important;
 }
 
+/* Round tracklist elements */
 .tl-row .tl-cell:first-child, .TableRow .TableCell:first-child {
 	border-radius: 100px 0 0 100px;
 }
 
 .tl-row .tl-cell:last-child, .TableRow .TableCell:last-child {
 	border-radius: 0 100px 100px 0;
+}
+
+/* Remove popular track image */
+.tl-image {
+	display: none;
+}
+
+/* Round artist popular tracklist elements */
+.tracklist-popular .tl-row .tl-number {
+	border-radius: 100px 0 0 100px;
 }
 
 @media screen and (max-width: 950px) {
@@ -711,10 +722,6 @@ body.remotebar .view-player .player-bar-wrapper {
 	color: var(--modspotify_main_fg);
 }
 
-/* Remove popular track image */
-.tl-image {
-	display: none;
-}
 
 .TableCell {
 	border-top: 0;
