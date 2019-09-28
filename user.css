@@ -5,19 +5,19 @@
 	--section-border-radius: 8px;
 }
 
-@font-face {
+/*@font-face {
 	font-family: "Google Sans Display";
 	src: url("https://d2j0f09xqmv212.cloudfront.net/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 400;
-}
+}*/
 
-@font-face {
+/*@font-face {
 	font-family: "Google Sans Display";
 	src: url("https://d2j0f09xqmv212.cloudfront.net/fonts/GoogleSansDisplayMedium.woff2") format("woff2");
 	font-style: normal;
 	font-weight: 500;
-}
+}*/
 
 @font-face {
 	font-family: "Roboto";
@@ -34,9 +34,29 @@
 }
 
 body {
-	--glue-font-family: "Google Sans Display", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+	--glue-font-family: "Product Sans", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
 	--info-font-family: "Roboto", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
 	letter-spacing: 0;
+}
+
+/* Remove new playlist button */
+.LeftSidebarNewPlaylistButton__button {
+	display: none !important;
+}
+
+/* Download Progress */
+.sidebar #offline-global-progress {
+	border-top: 1px solid var(--modspotify_slider_bg) !important;
+}
+
+.sidebar #offline-global-progress p {
+	background-color: var(--modspotify_main_fg);
+}
+
+/* Offline indicator */
+.offline-label-wrapper {
+	background-color: var(--modspotify_main_bg);
+	border-top: 1px solid var(--modspotify_slider_bg);
 }
 
 /*Round corner cover image*/
@@ -130,7 +150,17 @@ body {
 	background-color: transparent;
 	padding-left: 34px;
 	border-radius: 0 !important;
-	border-bottom: 1px solid var(--modspotify_main_fg) !important;
+}
+
+.content-top-bar__search-input {
+	margin-top: 15px;
+	background-color: rgba(var(--modspotify_rgb_main_bg), .54);
+	border-radius: 100px;
+	height: 32px;
+}
+
+.search-mount-point {
+	margin: 4px;
 }
 
 /*
@@ -233,6 +263,11 @@ form, so I move last cover to the right 20px and first one to the left 20px
 	background: transparent !important;
 }
 
+/* Color tracklist sort arrow */
+.tl-sort-asc::after, .tl-sort-desc::after {
+	color: var(--modspotify_main_fg);
+}
+
 .GlueHeader__background-overlay {
 	background: var(--modspotify_main_bg) !important;
 }
@@ -242,14 +277,19 @@ form, so I move last cover to the right 20px and first one to the left 20px
 .browser-navigation-top-bar {
 	margin-top: 15px !important;
 	margin-left: 8px;
-}
 
-.SearchInput__input, .SearchInput__searchIcon, .SearchInput__clearButton {
-	margin-top: 15px !important;
+	/* Transparent background */
+	height: unset !important;
+	background-color: rgba(var(--modspotify_rgb_main_bg), .54);
+	border-radius: 100px;
 }
 
 .content-top-bar__profile-menu-button {
 	margin-top: 15px !important;
+}
+
+#profile-menu-toggle::before {
+	background-color: rgba(var(--modspotify_rgb_main_bg), .54);
 }
 
 .body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
@@ -305,11 +345,7 @@ and add little glowing effect
 */
 
 .navbar-nav::after {
-	width: 100%;
-	height: 1px;
-	bottom: 0;
-	position: absolute;
-	background: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+	display: none;
 }
 
 .nav.navbar-nav li {
@@ -586,7 +622,7 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .LeftSidebar__section {
 	margin: 0;
-	padding: 18px 0;
+	padding: 8px 0;
 	border-bottom: 1px solid var(--modspotify_scrollbar_fg_and_selected_row_bg);
 }
 
@@ -653,11 +689,11 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 .tl-row .tl-cell:first-child, .TableRow .TableCell:first-child {
-	border-radius: 4px 0 0 4px;
+	border-radius: 100px 0 0 100px;
 }
 
 .tl-row .tl-cell:last-child, .TableRow .TableCell:last-child {
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 100px 100px 0;
 }
 
 @media screen and (max-width: 950px) {
@@ -673,6 +709,11 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight, .TableCellSong--track-is-playing .TableCellSong__featuredArtist, .TableCellSong--track-is-playing .TableCellSong__text-truncator, .TableCellSong--track-is-playing .TableCellSong__track-name {
 	color: var(--modspotify_main_fg);
+}
+
+/* Remove popular track image */
+.tl-image {
+	display: none;
 }
 
 .TableCell {
@@ -691,6 +732,25 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .card-horizontal .card-info-content-wrapper, .card-horizontal-size-medium .card-info-wrapper .card-info-content-wrapper {
 	padding-left: 0;
+}
+
+/* Fix calendar icon inheriting wrong colors */
+.calendar-icon-month {
+	color: var(--modspotify_preserve_1);
+}
+
+.calendar-icon-day {
+	background-color: var(--modspotify_preserve_1);
+}
+
+/* Fix card artist image */
+.card-type-artist .card-image {
+	border-radius: 100px !important;
+}
+
+/* Fit overlay to circular artist icon */
+.card-type-artist .card-overlay {
+	border-radius: 500px !important;
 }
 
 /* Sort element: color, remove label */
@@ -713,13 +773,20 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /* Search bar in app */
 
-.h-search {
+.h-search:hover, .h-search:focus {
 	border-bottom: 1px solid var(--modspotify_main_fg);
+}
+
+.h-search {
 	border-radius: 0;
 }
 
 .focus .h-search, .h-search:focus {
 	background: none;
+}
+
+.h-title a {
+	color: var(--modspotify_secondary_fg) !important;
 }
 
 /* Card buttons */
@@ -940,16 +1007,38 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /*Force player bar to has fixed height*/
 
+/* Apply constrasting background to player bar */
+
 .view-player {
 	height: var(--bar-height) !important;
 	border-top: 0;
-	margin: 0 15px;
+	padding: 0 15px;
+	background: var(--modspotify_slider_bg);
+	box-shadow: 0 0 20px 5px var(--modspotify_main_bg);
+}
+
+/* Fix scrolling text shadowing color */
+
+.view-player .text-container .text-item-container .text-item .scroll-text-container:after {
+	background: linear-gradient(90deg,transparent,var(--modspotify_slider_bg));
+}
+
+/* Hide dots under controls */
+.view-player .player-controls-container .controls .button-repeat:after, 
+.view-player .player-controls-container .controls .button-shuffle:after, 
+.view-player .player-controls-container .controls .button-thumbs-down:after, 
+.view-player .player-controls-container .controls .button-thumbs-up:after {
+	display: none;
 }
 
 /* Player Progress bar */
 
 .view-player .now-playing {
 	overflow: unset;
+}
+
+.view-player .track a {
+	color: var(--modspotify_secondary_fg) !important;
 }
 
 .view-player .now-playing-container .button-add {
@@ -1096,6 +1185,11 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	color: var(--modspotify_secondary_fg);
 }
 
+/* Connect Icon */
+.view-player .extra-controls-container .button-devices.active, .view-player .extra-controls-container .button-lyrics.active, .view-player .extra-controls-container .button-queue.active, .view-player .extra-controls-container .button-subtitles.active {
+	color: var(--modspotify_main_fg) !important;
+}
+
 /* Connect Device Popup */
 
 /* Cannot edit svg colors, hide it away */
@@ -1112,7 +1206,7 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 /* Volume bar */
 
 .view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner, .view-player .extra-controls-container .volumebar-container:hover .inner {
-	background-color: var(--modspotify_sidebar_indicator_and_hover_button_bg);
+	background-color: var(--modspotify_main_fg);
 }
 
 /* Search page */

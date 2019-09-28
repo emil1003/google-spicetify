@@ -11,6 +11,12 @@ Spotify with Google style
 #### Dark
 <img src="https://i.imgur.com/k6cIQik.png" alt="img" align="center" width="600px">
 
+#### Adapta
+A theme made to fit with the [Adapta GTK Theme](https://github.com/adapta-project/adapta-gtk-theme).
+
+#### Plata
+A theme made fit with the [Plata GTK theme](https://gitlab.com/tista500/plata-theme) (using Adapta accent colors).
+
 ## How to install
 1. Install [spicetify-cli](https://github.com/khanhas/spicetify-cli) and make sure it applies default theme succesfully.
 2. Run these commands:
@@ -33,7 +39,7 @@ spicetify config current_theme google-spicetify
 spicetify apply
 ```
 
-There are 4 color schemes you can choose: `Base`, `Dark`, `Gow`, `Spotify`. Change scheme with commands:
+There are 6 color schemes you can choose: `Base`, `Dark`, `Gow`, `Spotify`, `Adapta`, `Plata`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
