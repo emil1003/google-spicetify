@@ -707,6 +707,11 @@ body.remotebar .view-player .player-bar-wrapper {
 	border-radius: 100px 0 0 100px;
 }
 
+/* Fix Artist's Pick calendar icon wrapper width */
+.artist-pick-full .pinned-item-entity-wrapper {
+	width: calc(100% - 32px);
+}
+
 @media screen and (max-width: 950px) {
 	.tl-cell.tl-more {
 		border-radius: 0 4px 4px 0;
