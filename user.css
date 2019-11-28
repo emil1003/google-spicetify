@@ -813,11 +813,11 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .h-search-wrapper {
 	width: unset;
+	background-color: rgba(var(--modspotify_rgb_slider_bg), 0.6);
+	border-radius: 100px;
 }
 
 .sticky-top .h-search-wrapper {
-	background-color: rgba(var(--modspotify_rgb_main_bg), 0.6);
-	border-radius: 100px;
 	backdrop-filter: blur(5px);
 }
 
