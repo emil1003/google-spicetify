@@ -786,15 +786,39 @@ body.remotebar .view-player .player-bar-wrapper {
 /* Search bar in app */
 
 .h-search:hover, .h-search:focus {
-	border-bottom: 1px solid var(--modspotify_main_fg);
+	/*border-bottom: 1px solid var(--modspotify_main_fg);*/
 }
 
 .h-search {
 	border-radius: 0;
+	color: var(--modspotify_secondary_fg);
 }
 
 .focus .h-search, .h-search:focus {
 	background: none;
+}
+
+/* Search bar in app wrapper
+	EXPERIMENTAL: using backdrop-filter blur, availible in Chrome >= 76 */
+
+.h-search-field-wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.h-search-field-wrapper.sticky-top:not() {
+	background-color: transparent !important;
+}
+
+.h-search-wrapper {
+	width: unset;
+}
+
+.sticky-top .h-search-wrapper {
+	background-color: rgba(var(--modspotify_rgb_main_bg), 0.6);
+	border-radius: 100px;
+	backdrop-filter: blur(5px);
 }
 
 .h-title a {
