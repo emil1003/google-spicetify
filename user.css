@@ -1030,9 +1030,12 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 /* Fix scrolling text shadowing color */
+.view-player .text-container .text-item-container .text-item .scroll-text-container:before {
+	background: linear-gradient(270deg, transparent, var(--modspotify_slider_bg));
+}
 
 .view-player .text-container .text-item-container .text-item .scroll-text-container:after {
-	background: linear-gradient(90deg,transparent,var(--modspotify_slider_bg));
+	background: linear-gradient(90deg, transparent, var(--modspotify_slider_bg));
 }
 
 /* Hide dots under controls */
