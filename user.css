@@ -1202,6 +1202,15 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	color: var(--modspotify_main_fg) !important;
 }
 
+/* Connect indicator badge */
+.ConnectDevicePicker__button--with-badge:after {
+	border: 1px solid var(--modspotify_slider_bg);
+}
+
+.ConnectDevicePicker__button--with-badge.active:after {
+	background-color: var(--modspotify_main_fg);
+}
+
 /* Connect Device Popup */
 
 /* Cannot edit svg colors, hide it away */
