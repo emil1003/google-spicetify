@@ -1228,6 +1228,15 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	border-radius: 3px !important;
 }
 
+/* Recolor Connect devices */
+.ConnectPopup__device--available {
+	color: var(--modspotify_secondary_fg);
+}
+
+.ConnectPopup__device--active, .ConnectPopup__device--active .ConnectPopup__device-info, .ConnectPopup__device--active .ConnectPopup__device-title {
+	color: var(--modspotify_main_fg);
+}
+
 /* Volume bar */
 
 .view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner, .view-player .extra-controls-container .volumebar-container:hover .inner {
