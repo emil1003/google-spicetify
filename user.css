@@ -455,6 +455,7 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 
 .Header__background-color {
 	background-color: var(--modspotify_main_bg) !important;
+	background-image: unset; //Remove clashing gradient
 }
 
 /* Button */
