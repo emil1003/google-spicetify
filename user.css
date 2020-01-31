@@ -812,13 +812,13 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .h-search-wrapper {
 	width: unset;
-	background-color: rgba(var(--modspotify_rgb_slider_bg), 0.6);
+	background-color: rgba(var(--modspotify_rgb_slider_bg), 1);
 	border-radius: 100px;
 }
 
 //EXPERIMENTAL: using backdrop-filter blur, availible in Chrome >= 76
 .sticky-top .h-search-wrapper {
-	backdrop-filter: blur(5px);
+	//backdrop-filter: blur(5px);
 }
 
 .h-title a {
