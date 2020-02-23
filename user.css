@@ -59,6 +59,11 @@ body {
 	border-top: 1px solid var(--modspotify_slider_bg);
 }
 
+/* Fix playlist entry color when offline */
+.offline .tl-row:not(.unavailable):not(.local).offline-downloaded .tl-cell a:link, .offline .tl-row:not(.unavailable):not(.local).offline-downloaded .tl-highlight, .offline .tl-row:not(.unavailable):not(.local).locally-playable .tl-cell a:link, .offline .tl-row:not(.unavailable):not(.local).locally-playable .tl-highlight {
+	color: var(--modspotify_secondary_fg) !important;
+}
+
 /*Round corner cover image*/
 
 .card-image, .card-placeholder-wrapper, .card-image-content-wrapper, .card-image-wrapper, .Card .Card__image, .Card .Card__image-wrapper {
