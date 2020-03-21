@@ -792,15 +792,34 @@ body.remotebar .view-player .player-bar-wrapper {
 /* Search bar in app */
 
 .h-search:hover, .h-search:focus {
-	border-bottom: 1px solid var(--modspotify_main_fg);
+	/*border-bottom: 1px solid var(--modspotify_main_fg);*/
 }
 
 .h-search {
 	border-radius: 0;
+	color: var(--modspotify_secondary_fg);
 }
 
 .focus .h-search, .h-search:focus {
 	background: none;
+}
+
+/* Search bar in app wrapper */
+
+.h-search-field-wrapper {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.h-search-field-wrapper.sticky-top:not() {
+	background-color: transparent !important;
+}
+
+.h-search-wrapper {
+	width: unset;
+	background-color: rgba(var(--modspotify_rgb_slider_bg), 1);
+	border-radius: 100px;
 }
 
 .h-title a {
