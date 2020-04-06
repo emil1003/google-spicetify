@@ -1,6 +1,9 @@
 # google-spicetify
 Spotify with Google style
 
+## NOTICE
+This branch (`experimental-blur`) features blur effects, which in testing caused issues with memory leaks, at least on Windows. Use with care.
+
 ## Previews
 #### Base
 <img src="https://i.imgur.com/qguGx46.png" alt="img" align="center" width="600px">
