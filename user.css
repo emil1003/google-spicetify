@@ -1298,3 +1298,13 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	background-color: var(--modspotify_main_bg);
 	border-radius: 3px;
 }
+
+/*  When player bar has fixed position, every scrolling container
+	with content underneath the bar must have extra bottom padding
+	to move content into visible area.
+	However, it must apply to the container itself, or else
+	the content doesn't show under the bar.
+*/
+#content, .Rootlist__content, .App__content, .MadeForYouRoot {
+	margin-bottom: var(--bar-height);
+}
