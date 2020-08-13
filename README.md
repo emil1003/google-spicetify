@@ -27,13 +27,13 @@ A theme made fit with the [Plata GTK theme](https://gitlab.com/tista500/plata-th
 **Linux and MacOS** in Bash:
 ```bash
 cd "$(dirname "$(spicetify -c)")/Themes"
-git clone https://github.com/khanhas/google-spicetify
+git clone https://github.com/emil1003/google-spicetify
 ```
 
 **Windows** in Powershell:
 ```powershell
 cd "$(spicetify -c | Split-Path)\Themes"
-git clone https://github.com/khanhas/google-spicetify
+git clone https://github.com/emil1003/google-spicetify
 ```
 
 3. Finally, run:
